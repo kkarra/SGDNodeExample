@@ -1,7 +1,84 @@
 doctype html
 html
   head
-    title= title
+    title Saccharomyces Genome Database
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+    //- Includes header.html into template 
+    //- header#layout-page-header
+    //-      #layout-page-header-content.row
+    //-        section#logo-section.small-4.columns
+    //-          a(href='/')
+    //-            .logo
+    //-              span.logo-label Saccharomyces Genome Database
+    //- 
+    //-        //- logo section
+    //-        section#header-tools.small-7.small-offset-1.columns
+    //-          .row.header-links
+    //-            ul.site-links
+    //-              li
+    //-                a(href='/about') About
+    //-              li
+    //-                a(href='/blog') Blog
+    //-              li
+    //-                a(href='/download-data') Download
+    //-              li
+    //-                a(href='/site-map') Site Map
+    //-              li
+    //-                a(href='/help') Help
+    //-            ul.social-links
+    //-              li
+    //-                a#email-header.webicon.mail.x-small(href='/cgi-bin/suggestion', target='_blank') Email Us
+    //-              li
+    //-                a#twitter.webicon.twitter.x-small(href='http://twitter.com/#!/yeastgenome', target='_blank') Twitter
+    //-              li
+    //-                a#facebook.webicon.facebook.x-small(href='https://www.facebook.com/pages/Saccharomyces-Genome-Database-SGD/139140876128200', target='_blank') Facebook
+    //-              li
+    //-                a#youtube.webicon.youtube.x-small(href='https://www.youtube.com/channel/UCnTiLvqP2aYeHEaJl7m9DUg', target='_blank') YouTube
+    //-              li
+    //-                a#rss.webicon.rss.x-small(href='/feed', target='_blank') RSS
+    //- 
+    //-          .row.header-search
+    //-            form#searchform.no-margins(action='/cgi-bin/search/luceneQS.fpl', autocomplete='off', method='get')
+    //-              #top-search-input-container.row.collapse
+    //-                .small-6.small-offset-5.columns
+    //-                  input#txt_search.search-query.radius.prefix-input.no-margins.ui-autocomplete-input(name='query', type='text', placeholder='Search', autocomplete='off', role='textbox', aria-autocomplete='list', aria-haspopup='true')
+    //-                .small-1.columns
+    //-                  a.secondary.button.no-margins.postfix.radius(href='#', onclick='document.getElementById(\'searchform\').submit();')
+    //-                    i.fa.fa-search
+    //-              #adv-search-links
+    //-                | YeastMine:
+    //-                a(href='http://yeastmine.yeastgenome.org/yeastmine/bag.do') Batch Analysis
+    //-                | or
+    //-                a(target='_blank', href='http://yeastmine.yeastgenome.org/yeastmine/begin.do') Advanced Search
+    //-              
+    //-          .row
+    //-            h1 Hola Mundo
+    //-      #layout-page-header-nav
+    //-        .contain-to-grid
+    //-          nav.top-bar(data-topbar='data-topbar')
+    //-            ul.title-area
+    //-              li.name
+    //-                h1
+    //-                  span.hide-for-small
+    //-                    a(href='/') SGD
+    //-                  span.show-for-small
+    //-                    a(href='/')
+    //-                      //- img#sgd-mini-logo(src='/img-domain/sgd-logo-sm-hi-res-v2.png', alt='SGD Logo')
+    //-              //- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone 
+    //-              li.toggle-topbar.menu-icon
+    //-                a(href='#')
+    //-                  span Menu
+    //-            section.top-bar-section
+    //-              //- 
+    //-              ul.left
+    //-                li.divider
+    //-                li.menu-search
+    //-                  form#searchform-mobile.no-margins(action='/cgi-bin/search/luceneQS.fpl', autocomplete='off', method='get')
+    //-                    input#text_search-mobile.search-query.radius.no-margins(name='query', type='text', placeholder='Search', autocomplete='off', role='textbox', aria-autocomplete='list', aria-haspopup='true')
+    //-                li.has-dropdown
+    //-                  a(href='#') Analyze
+    //-                  ul.dropdown
+    //-                    li
+   
