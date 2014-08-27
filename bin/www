@@ -1,9 +1,29 @@
 #!/usr/bin/env node
-var debug = require('debug')('myapp');
+var cluster = require('cluster');
+var debug = require('debug')('SGDNodeFrontend');
 var app = require('../app');
 
-app.set('port', process.env.PORT || 3000);
+/*
+	Use node cluster module to start a new intance of the application for each core on the OS.
+	per http://nodejs.org/api/cluster.html
+*/
 
-var server = app.listen(app.get('port'), function() {
-  debug('Express server listening on port ' + server.address().port);
-});
+// get number of cores on OS
+var numCPUs = require('os').cpus().length;
+
+if (cluster.isMaster) {
+	// Fork workers.
+	for (var i = 0; i < numCPUs; i++) {
+		cluster.fork();
+	}
+
+	cluster.on('exit', function(worker, code, signal) {
+		console.log('worker ' + worker.process.pid + ' died');
+	});
+} else {
+	app.set('port', process.env.PORT || 3000);
+
+	var server = app.listen(app.get('port'), function() {
+		debug('Express server listening on port ' + server.address().port);
+	});
+}
