@@ -5,9 +5,10 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 var compression = require('compression');
 
-// include router middleware
-var routes = require('./routes/index');
-var healthcheck = require('./routes/healthcheck');
+// include routers
+var indexRouter = require('./routers/index');
+var healthcheckRouter = require('./routers/healthcheck');
+var apiRouter = require('./routers/api');
 
 // declare app
 var app = express();
@@ -28,8 +29,6 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 
-// REMOVE
-// app.use(require('stylus').middleware(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'public_build')));
 
 
@@ -40,10 +39,11 @@ app.use(express.static(path.join(__dirname, 'public_build')));
 */
 
 // index "a.k.a front page"
-app.use('/', routes);
+app.use('/', indexRouter);
+app.use('/api', apiRouter);
 
 // healthcheck for load balancer
-app.get('/healthcheck', healthcheck);
+// app.get('/healthcheck', healthcheck);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {
