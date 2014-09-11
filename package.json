@@ -14,12 +14,12 @@
     "debug": "~0.7.4",
     "jade": "~1.3.0",
     "stylus": "0.42.3",
-    "compression": "*",
-    "coffee-script": "~1.7.1"
+    "compression": "*"
   },
   "devDependencies": {
     "grunt": "~0.4.0rc7",
     "grunt-browserify": "*",
+    "grunt-contrib-sass": "~0.8.1",
     "browserify": "~2.3.0",
     "browserify-shim": "*",
     "reactify": "*",
