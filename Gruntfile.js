@@ -12,9 +12,7 @@ module.exports = function(grunt) {
                 dest: BUILD_PATH + "js/application.js",
                 src: "client/js/application.js",
                 options: {
-                    bundleOptions: {
-                        debug: true
-                    }
+                    debug: true
                 }
             }
         },

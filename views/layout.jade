@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title Saccharomyces Genome Database
+    title Not the Saccharomyces Genome Database
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     //- Includes header.html into template
@@ -10,7 +10,7 @@ html
       section#logo-section.small-4.columns
        a(href='/')
          .logo
-           span.logo-label Saccharomyces Genome Database
+           span.logo-label Not the Saccharomyces Genome Database
 
       //- logo section
       section#header-tools.small-7.small-offset-1.columns
@@ -19,9 +19,6 @@ html
            li
              a(href='/about') About
            li
-
-
-
              a(href='/blog') Blog
            li
              a(href='/download-data') Download
@@ -42,18 +39,15 @@ html
              a#rss.webicon.rss.x-small(href='/feed', target='_blank') RSS
 
        .row.header-search
-         form#searchform.no-margins(action='/search', autocomplete='off', method='get')
+         form#searchform(action='/search', autocomplete='off', method='get')
            #top-search-input-container.row.collapse
-             .small-6.small-offset-5.columns
-               input#txt_search.search-query.radius.prefix-input.no-margins.ui-autocomplete-input(name='query', type='text', placeholder='Search', autocomplete='off', role='textbox', aria-autocomplete='list', aria-haspopup='true')
-             .small-1.columns
-               a.secondary.button.no-margins.postfix.radius(href='#', onclick='document.getElementById(\'searchform\').submit();')
-                 i.fa.fa-search
-           #adv-search-links
-             | YeastMine:
-             a(href='http://yeastmine.yeastgenome.org/yeastmine/bag.do') Batch Analysis
-             | or
-             a(target='_blank', href='http://yeastmine.yeastgenome.org/yeastmine/begin.do') Advanced Search
+               input#txt_search(name='query', type='text', placeholder='Search', autocomplete='off')
+
+         #adv-search-links
+           | YeastMine:
+           a(href='http://yeastmine.yeastgenome.org/yeastmine/bag.do') Batch Analysis
+           | or
+           a(target='_blank', href='http://yeastmine.yeastgenome.org/yeastmine/begin.do') Advanced Search
 
        .row
          block content
