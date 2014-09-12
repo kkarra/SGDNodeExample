@@ -7,7 +7,6 @@ var compression = require('compression');
 
 // include routers
 var indexRouter = require('./routers/index');
-var healthcheckRouter = require('./routers/healthcheck');
 var apiRouter = require('./routers/api');
 
 // declare app
@@ -34,16 +33,13 @@ app.use(express.static(path.join(__dirname, 'public_build')));
 
 /*
   Routes
-  
+
   Routes are listed here, and their corresponding response logic can be found in /routes.
 */
 
 // index "a.k.a front page"
 app.use('/', indexRouter);
 app.use('/api', apiRouter);
-
-// healthcheck for load balancer
-// app.get('/healthcheck', healthcheck);
 
 /// catch 404 and forward to error handler
 app.use(function(req, res, next) {

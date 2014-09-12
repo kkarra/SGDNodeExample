@@ -4,7 +4,7 @@ html
     title Saccharomyces Genome Database
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    //- Includes header.html into template 
+    //- Includes header.html into template
     header#layout-page-header
     #layout-page-header-content.row
       section#logo-section.small-4.columns
@@ -19,9 +19,9 @@ html
            li
              a(href='/about') About
            li
-           
-           
-           
+
+
+
              a(href='/blog') Blog
            li
              a(href='/download-data') Download
@@ -54,34 +54,8 @@ html
              a(href='http://yeastmine.yeastgenome.org/yeastmine/bag.do') Batch Analysis
              | or
              a(target='_blank', href='http://yeastmine.yeastgenome.org/yeastmine/begin.do') Advanced Search
-   
+
        .row
          block content
     script(type='text/javascript' src='/js/application.js')
 
-      //- #layout-page-header-nav
-      //- .contain-to-grid
-      //-  nav.top-bar(data-topbar='data-topbar')
-      //-    ul.title-area
-      //-      li.name
-      //-        h1
-      //-          span.hide-for-small
-      //-            a(href='/') SGD
-      //-          span.show-for-small
-      //-            a(href='/')
-      //-              //- img#sgd-mini-logo(src='/img-domain/sgd-logo-sm-hi-res-v2.png', alt='SGD Logo')
-      //-      //- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone 
-      //-      li.toggle-topbar.menu-icon
-      //-        a(href='#')
-      //-          span Menu
-      //-    section.top-bar-section
-      //-      //- 
-      //-      ul.left
-      //-        li.divider
-      //-        li.menu-search
-      //-          form#searchform-mobile.no-margins(action='/cgi-bin/search/luceneQS.fpl', autocomplete='off', method='get')
-      //-            input#text_search-mobile.search-query.radius.no-margins(name='query', type='text', placeholder='Search', autocomplete='off', role='textbox', aria-autocomplete='list', aria-haspopup='true')
-      //-        li.has-dropdown
-      //-          a(href='#') Analyze
-      //-          ul.dropdown
-      //-            li
