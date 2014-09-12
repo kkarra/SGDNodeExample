@@ -27,6 +27,10 @@ Start node
 Navigate to the application in your browser at http://localhost:3000, or http://localhost:3000/api to see the example API response.
 
 
+## For SASS
+you must install ruby and rubygems, then:
+    $ sudo gem install sass
+
 ## Using Grunt
 
 To compile CSS using SASS, run:
